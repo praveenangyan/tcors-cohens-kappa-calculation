@@ -1,0 +1,261 @@
+from sklearn.metrics import cohen_kappa_score
+import csv
+series1 = []
+series2 = []
+series3 = []
+series4 = []
+series5 = []
+series6 = []
+series7 = []
+series8 = []
+series9 = []
+series10 = []
+series11 = []
+series12 = []
+series13 = []
+series14 = []
+series15 = []
+series16 = []
+series17 = []
+series18 = []
+series19 = []
+series20 = []
+series21 = []
+series22 = []
+series23 = []
+series24 = []
+series25 = []
+series26 = []
+
+series27 = []
+series28 = []
+series29 = []
+series30 = []
+series31 = []
+series32 = []
+series33 = []
+series34 = []
+series35 = []
+series36 = []
+series37 = []
+series38 = []
+series39 = []
+series40 = []
+series41 = []
+series42 = []
+series43 = []
+series44 = []
+series45 = []
+series46 = []
+series47 = []
+series48 = []
+series49 = []
+series50 = []
+series51 = []
+series52 = []
+
+series53 = []
+series54 = []
+series55 = []
+series56 = []
+series57 = []
+series58 = []
+series59 = []
+series60 = []
+series61 = []
+series62 = []
+series63 = []
+series64 = []
+series65 = []
+series66 = []
+series67 = []
+series68 = []
+series69 = []
+series70 = []
+series71 = []
+series72 = []
+series73 = []
+series74 = []
+series75 = []
+series76 = []
+series77 = []
+series78 = []
+
+def lower_and_strip(value):
+    return value.lower().strip()
+
+def clean(value):
+    value_list = value.split(",")
+    lowered_and_stripped_value_list = list(map(lower_and_strip, value_list))
+    lowered_and_stripped_sorted_value_list = sorted(lowered_and_stripped_value_list)
+    final_value = ",".join(lowered_and_stripped_sorted_value_list)
+    if final_value == "":
+        print value
+    return final_value
+    
+with open('all_codes.csv', 'rb') as csvfile:
+    reader = csv.reader(csvfile, delimiter = ',')
+    next(reader, None) # Skip the header
+    for row in reader:
+        series1.append(clean(row[4]))
+        series2.append(clean(row[17]))
+        series3.append(clean(row[5]))
+        series4.append(clean(row[18]))
+        series5.append(clean(row[6]))
+        series6.append(clean(row[19]))
+        series7.append(clean(row[7]))
+        series8.append(clean(row[20]))
+        series9.append(clean(row[8]))
+        series10.append(clean(row[21]))
+        series11.append(clean(row[9]))
+        series12.append(clean(row[22]))
+        series13.append(clean(row[10]))
+        series14.append(clean(row[23]))
+        series15.append(clean(row[11]))
+        series16.append(clean(row[24]))
+        series17.append(clean(row[12]))
+        series18.append(clean(row[25]))
+        series19.append(clean(row[13]))
+        series20.append(clean(row[26]))
+        series21.append(clean(row[14]))
+        series22.append(clean(row[27]))
+        series23.append(clean(row[15]))
+        series24.append(clean(row[28]))
+        series25.append(clean(row[16]))
+        series26.append(clean(row[29]))
+
+        series27.append(clean(row[30]))
+        series28.append(clean(row[17]))
+        series29.append(clean(row[31]))
+        series30.append(clean(row[18]))
+        series31.append(clean(row[32]))
+        series32.append(clean(row[19]))
+        series33.append(clean(row[33]))
+        series34.append(clean(row[20]))
+        series35.append(clean(row[34]))
+        series36.append(clean(row[21]))
+        series37.append(clean(row[35]))
+        series38.append(clean(row[22]))
+        series39.append(clean(row[36]))
+        series40.append(clean(row[23]))
+        series41.append(clean(row[37]))
+        series42.append(clean(row[24]))
+        series43.append(clean(row[38]))
+        series44.append(clean(row[25]))
+        series45.append(clean(row[39]))
+        series46.append(clean(row[26]))
+        series47.append(clean(row[40]))
+        series48.append(clean(row[27]))
+        series49.append(clean(row[41]))
+        series50.append(clean(row[28]))
+        series51.append(clean(row[42]))
+        series52.append(clean(row[29]))
+
+        series53.append(clean(row[30]))
+        series54.append(clean(row[4]))
+        series55.append(clean(row[31]))
+        series56.append(clean(row[5]))
+        series57.append(clean(row[32]))
+        series58.append(clean(row[6]))
+        series59.append(clean(row[33]))
+        series60.append(clean(row[7]))
+        series61.append(clean(row[34]))
+        series62.append(clean(row[8]))
+        series63.append(clean(row[35]))
+        series64.append(clean(row[9]))
+        series65.append(clean(row[36]))
+        series66.append(clean(row[10]))
+        series67.append(clean(row[37]))
+        series68.append(clean(row[11]))
+        series69.append(clean(row[38]))
+        series70.append(clean(row[12]))
+        series71.append(clean(row[39]))
+        series72.append(clean(row[13]))
+        series73.append(clean(row[40]))
+        series74.append(clean(row[14]))
+        series75.append(clean(row[41]))
+        series76.append(clean(row[15]))
+        series77.append(clean(row[42]))
+        series78.append(clean(row[16]))
+
+print "AM-KR-Image source" 
+print cohen_kappa_score(series1, series2)
+print "AM-KR-Image theme" 
+print cohen_kappa_score(series3, series4)
+print "AM-KR-Overlayed text" 
+print cohen_kappa_score(series5, series6)
+print "AM-KR-Overlayed text value" 
+print cohen_kappa_score(series7, series8)
+print "AM-KR-Image Color"
+print cohen_kappa_score(series9, series10)
+print "AM-KR-Image subject"
+print cohen_kappa_score(series11, series12)
+print "AM-KR-Gender"
+print cohen_kappa_score(series13, series14)
+print "AM-KR-Celebrities"
+print cohen_kappa_score(series15, series16)
+print "AM-KR-Individual or group"
+print cohen_kappa_score(series17, series18)
+print "AM-KR-Race/Ethnicity"
+print cohen_kappa_score(series19, series20)
+print "AM-KR-Image tone"
+print cohen_kappa_score(series21, series22)
+print "AM-KR-Location"
+print cohen_kappa_score(series23, series24)
+print "AM-KR-Direction"
+print cohen_kappa_score(series25, series26)
+
+print "KR-QL-Image source" 
+print cohen_kappa_score(series27, series28)
+print "KR-QL-Image theme" 
+print cohen_kappa_score(series29, series30)
+print "KR-QL-Overlayed text" 
+print cohen_kappa_score(series31, series32)
+print "KR-QL-Overlayed text value" 
+print cohen_kappa_score(series33, series34)
+print "KR-QL-Image Color"
+print cohen_kappa_score(series35, series36)
+print "KR-QL-Image subject"
+print cohen_kappa_score(series37, series38)
+print "KR-QL-Gender"
+print cohen_kappa_score(series39, series40)
+print "KR-QL-Celebrities"
+print cohen_kappa_score(series41, series42)
+print "KR-QL-Individual or group"
+print cohen_kappa_score(series43, series44)
+print "KR-QL-Race/Ethnicity"
+print cohen_kappa_score(series45, series46)
+print "KR-QL-Image tone"
+print cohen_kappa_score(series47, series48)
+print "KR-QL-Location"
+print cohen_kappa_score(series49, series50)
+print "KR-QL-Direction"
+print cohen_kappa_score(series51, series52)
+
+print "AM-QL-Image source" 
+print cohen_kappa_score(series53, series54)
+print "AM-QL-Image theme" 
+print cohen_kappa_score(series55, series56)
+print "AM-QL-Overlayed text" 
+print cohen_kappa_score(series57, series58)
+print "AM-QL-Overlayed text value" 
+print cohen_kappa_score(series59, series60)
+print "AM-QL-Image Color"
+print cohen_kappa_score(series61, series62)
+print "AM-QL-Image subject"
+print cohen_kappa_score(series63, series64)
+print "AM-QL-Gender"
+print cohen_kappa_score(series65, series66)
+print "AM-QL-Celebrities"
+print cohen_kappa_score(series67, series68)
+print "AM-QL-Individual or group"
+print cohen_kappa_score(series69, series70)
+print "AM-QL-Race/Ethnicity"
+print cohen_kappa_score(series71, series72)
+print "AM-QL-Image tone"
+print cohen_kappa_score(series73, series74)
+print "AM-QL-Location"
+print cohen_kappa_score(series75, series76)
+print "AM-QL-Direction"
+print cohen_kappa_score(series77, series78)
+
